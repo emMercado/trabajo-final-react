@@ -14,7 +14,7 @@ const get = async (url, data) => {
     return res.data;
 } 
 
-const post = async (url, data) => {
+/* const post = async (url, data) => {
     const request = {
         method: 'post',
         url: url,
@@ -26,8 +26,8 @@ const post = async (url, data) => {
 
     const res = await exec(request);
     return res.data;
-}
-
+} */
+/* 
 const delet = async (url, data) => {
     const request = {
         method: 'delete',
@@ -40,9 +40,9 @@ const delet = async (url, data) => {
 
     const res = await exec(request);
     return res.data;
-} 
+}  */
 
-const patch = async (url, data) => {
+/* const patch = async (url, data) => {
     const request = {
         method: 'patch',
         url: url,
@@ -54,7 +54,7 @@ const patch = async (url, data) => {
 
     const res = await exec(request);
     return res.data;
-}
+} */
 
 const exec = async (request) => {
     try{
@@ -64,13 +64,13 @@ const exec = async (request) => {
         console.error(err)
         throw Error(err)
     }
-}
+} 
 
 const client = {
     get: (url, data = {}) => get(url, data),
-    post: (url, data = {}) => post(url, data),
+ /*    post: (url, data = {}) => post(url, data),
     delete: (url, data = {}) => delet(url, data),
-    patch: (url, data = {}) => patch(url, data) 
+    patch: (url, data = {}) => patch(url, data)  */
 }
 
 export default client;

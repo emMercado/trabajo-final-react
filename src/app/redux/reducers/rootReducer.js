@@ -1,11 +1,8 @@
 import { combineReducers } from 'redux';
-import { usersReducer } from './usersReducer';
+import { getPointsAllPoints } from './pointsReducer'
 
-const root = (state = {}, action) => {
-    return state
-}
+const rootReducer = combineReducers({
+  point: getPointsAllPoints
+});
 
-export default combineReducers({
-    root,
-    usersReducer
-})
+export default rootReducer;
